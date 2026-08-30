@@ -1,7 +1,7 @@
 # Dirty Coding I Do here
 
-This repo consists one of the dirty codes i do write here in a single python file. I do document everything inside the python doc-strings
-and i dont use ai to code or get help.
-I did the old fashioned way to get my coding to be dunk and get better.
+This repo is where I dump all my dirty codes in a single Python file. I document everything inside the docstrings and I don't use AI to code or get help.
 
-~ TBH i do code, but not very better then the spongebob!! yoo
+I do it the old fashioned way — just me vs the code, trying to get better at this thing.
+
+~ TBH I code, but not better than SpongeBob yet. Yoo.
