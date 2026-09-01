@@ -1,10 +1,11 @@
 [project]
 name = "code-bab"
 version = "0.1.0"
-description = "Add your description here"
+description = "Get My hands dirty"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.141.1",
     "pygame>=2.6.1",
+    "rich>=15.0.0",
 ]
