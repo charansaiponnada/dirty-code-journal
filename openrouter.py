@@ -25,41 +25,41 @@ Sample Output:
     *********************************
     Enter Prompt:  EXIT
 """
-import requests
+
 import json
+import os
+
+import requests
 import rich
+from dotenv import load_dotenv
 from rich.console import Console
 from rich.markdown import Markdown
-import os
-from dotenv import load_dotenv
-
 
 load_dotenv()
 API_KEY = os.getenv("OPENROUTER")
-print("*"* 12)
+print("*" * 12)
 print("MY AI APLICATION")
-print("*"* 12)
+print("*" * 12)
 
-while(1):
+while 1:
     prompt = input("Enter Prompt:  ")
     if prompt.lower() == "exit":
         exit()
     response = requests.post(
-        url = "https://www.openrouter.ai/api/v1/chat/completions",
+        url="https://www.openrouter.ai/api/v1/chat/completions",
         headers={
-            "Authorization" : f"Bearer {API_KEY}",
+            "Authorization": f"Bearer {API_KEY}",
             "Content-Type": "application/json",
         },
-        data=json.dumps({
-            "model" : "nvidia/nemotron-3.5-lightning:free",
-            "messages" : [{
-                "role" : "user",
-                "content" : f"{prompt}"
-            }]
-        })
+        data=json.dumps(
+            {
+                "model": "nvidia/nemotron-3.5-lightning:free",
+                "messages": [{"role": "user", "content": f"{prompt}"}],
+            }
+        ),
     )
     data = response.json()
     markdown_content = data["choices"][0]["message"]["content"]
     console = Console()
     console.print(Markdown(markdown_content))
-    print("*"*33)
+    print("*" * 33)
