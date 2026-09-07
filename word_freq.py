@@ -63,7 +63,7 @@ def top_words(filepath: str, n: int = 10) -> list[tuple[str, int]]:
                 frequency[word.lower()] += 1
         frequency = sorted(frequency.items(), key = lambda item:item[1])
         result = list(frequency)
-        return result[::-1]
+        return result[::-1][:n]
     except FileNotFoundError as e:
         raise FileNotFoundError(f'File Does not exist: {filepath}')
 
