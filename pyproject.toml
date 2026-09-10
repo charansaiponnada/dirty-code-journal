@@ -6,6 +6,7 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.141.1",
+    "openrouter>=1.1.136",
     "pygame>=2.6.1",
     "pytest>=9.1.1",
     "rich>=15.0.0",
