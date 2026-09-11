@@ -12,7 +12,6 @@ from rich.console import Console
 from rich.markdown import Markdown
 from requests.api import head
 
-
 load_dotenv()
 
 API = os.getenv("OPENROUTER")
